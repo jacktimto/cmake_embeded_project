@@ -8,7 +8,7 @@ set(CMAKE_SYSTEM_PROCESSOR ${CPU_CORE}) # 用于指定目标处理器的型号�
 
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_LIST_DIR}/toolchain.cmake) # CMAKE_CURRENT_LIST_DIR是CM艾克Lists.txt所在的路径
                                                                     # 指定工具链
-project(TEST C ASM) # 指定项目名称:TEST,和它支持的语言C ASM
+project(TEST C) # 指定项目名称:TEST,和它支持的语言C ASM
 
 string(TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE_UPPER) # 它将变量${CMAKE_BUILD_TYPE}的值转换为大写,并把结果存储在新的变量   BUILD_TYPE_UPPER
 if(${BUILD_TYPE_UPPER} STREQUAL "RELEASE")           # 如果编译选项是RELEASE,则选用 -Os 来编译
